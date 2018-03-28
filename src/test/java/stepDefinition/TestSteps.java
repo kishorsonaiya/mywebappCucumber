@@ -24,7 +24,7 @@ public class TestSteps {
 	
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-		System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", "//opt//selenium//IEDriverServer.exe");
 
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		// this line of code is to resolve protected mode issue
