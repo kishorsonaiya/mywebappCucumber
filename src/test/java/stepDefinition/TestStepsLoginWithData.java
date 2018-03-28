@@ -22,7 +22,7 @@ public class TestStepsLoginWithData {
 
 	@Given("^User is on Login Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-		System.setProperty("webdriver.ie.driver", "//opt//selenium//IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", "//opt//selenium//chromedriver");
 
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		// this line of code is to resolve protected mode issue
