@@ -52,7 +52,7 @@ public class TestStepsLoginWithData {
 		// it takes 3 sends to type one character.
 		capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
 
-		driver = new InternetExplorerDriver(capabilities);
+		driver = new ChromeDriver(capabilities);
 		driver.manage().window().maximize();
 	}
 
