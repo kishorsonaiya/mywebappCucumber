@@ -45,8 +45,7 @@ public class TestStepsLoginWithData {
 		// Adding INITIAL_BROWSER_URL, help to load the IE with required url.
 		// Otherwise it will open browser with default url and then redirect to
 		// application url
-		//capabilities.setCapability(ChromeDriver.INITIAL_BROWSER_URL,
-				"http://10.177.162.26:9080/mywebapp/userlogin.jsp");
+		//capabilities.setCapability(ChromeDriver.INITIAL_BROWSER_URL, "http://10.177.162.26:9080/mywebapp/userlogin.jsp");
 
 		// using this feature, sendKeys function was with good speed. Other wise
 		// it takes 3 sends to type one character.
