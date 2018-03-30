@@ -49,7 +49,7 @@ public class TestStepsLoginWithData {
 
 		// using this feature, sendKeys function was with good speed. Other wise
 		// it takes 3 sends to type one character.
-		capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
+		//capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
 
 		driver = new ChromeDriver(capabilities);
 		driver.manage().window().maximize();
