@@ -3,7 +3,7 @@ package stepDefinition;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,7 +22,7 @@ public class TestStepsLoginWithData {
 
 	@Given("^User is on Login Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "//opt//selenium//chromedriver");
+		System.setProperty("webdriver.firefox.marionette", "//opt//selenium//geckodriver");
 
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		// this line of code is to resolve protected mode issue
@@ -51,7 +51,8 @@ public class TestStepsLoginWithData {
 		// it takes 3 sends to type one character.
 		//capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
 
-		driver = new ChromeDriver(capabilities);
+		driver = new FirefoxDriver();
+		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
 		driver.manage().window().maximize();
 	}
 
