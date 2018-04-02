@@ -25,32 +25,7 @@ public class TestSteps {
 	public void user_is_on_Home_Page() throws Throwable {
 		System.setProperty("webdriver.gecko.driver", "//opt//selenium//geckodriver");
 
-		// this line of code is to resolve protected mode issue
-		// capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
-		// true);
-		//capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
-		// without this setting, page will get open and then get closed
-		//capabilities.setCapability(ChromeDriver.INITIAL_BROWSER_URL, "");
-
-		// capabilities.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL,
-		// "http://localhost:8090/mywebapp/userlogin.jsp");
-
-		// this line of code is to resolve protected mode issue
-		//capabilities.setCapability(ChromeDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-
-		// **VERY important** adding this line make launching the webapp site
-		//capabilities.setCapability(ChromeDriver.IGNORE_ZOOM_SETTING, true);
-
-		// Adding INITIAL_BROWSER_URL, help to load the IE with required url.
-		// Otherwise it will open browser with default url and then redirect to
-		// application url
-		//capabilities.setCapability(ChromeDriver.INITIAL_BROWSER_URL,"http://10.177.162.26:9080/mywebapp/userlogin.jsp");
-
-		// using this feature, sendKeys function was with good speed. Other wise
-		// it takes 3 sends to type one character.
-		//capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
-
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
 		driver = new FirefoxDriver(capabilities);
 		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
