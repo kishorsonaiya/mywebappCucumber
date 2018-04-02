@@ -23,7 +23,7 @@ public class TestSteps {
 	
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-		//System.setProperty("webdriver.gecko.driver", "//opt//selenium//geckodriver");
+		System.setProperty("webdriver.gecko.driver", "//opt//selenium//geckodriver");
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", true);
 		driver = new FirefoxDriver(capabilities);
