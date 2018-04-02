@@ -26,12 +26,12 @@
 		<dependency>  
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.35.0</version>
+      <version>3.11.0</version>
 </dependency>  
 <dependency>  
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-server</artifactId>
-      <version>2.35.0</version>
+      <version>3.11.0</version>
 </dependency>  
 <dependency>  
       <groupId>org.seleniumhq.selenium</groupId>
@@ -41,7 +41,7 @@
 <dependency>  
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-api</artifactId>
-      <version>2.35.0</version>
+      <version>3.11.0</version>
 </dependency>  
 		
 		
