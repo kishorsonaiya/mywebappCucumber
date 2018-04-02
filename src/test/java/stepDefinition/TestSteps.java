@@ -29,7 +29,6 @@ public class TestSteps {
 		capabilities.setCapability("marionette", false);
 		driver = new FirefoxDriver(capabilities);
 		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
-		driver.manage().window().maximize();
 		driver.navigate().to(baseUrl);
 	}
 
