@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -24,11 +22,7 @@ public class TestStepsLoginWithData {
 	public void user_is_on_Home_Page() throws Throwable {
 		System.setProperty("webdriver.gecko.driver", "//opt//selenium//geckodriver");
 
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		// this line of code is to resolve protected mode issue
-		// capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
-		// true);
-		capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		
 
 		// without this setting, page will get open and then get closed
 		//capabilities.setCapability(ChromeDriver.INITIAL_BROWSER_URL, "");
@@ -54,6 +48,7 @@ public class TestStepsLoginWithData {
 		driver = new FirefoxDriver();
 		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
 		driver.manage().window().maximize();
+		driver.navigate().to(baseUrl);
 	}
 
 	@When("^User enters \"([^\"]*)\" and \"([^\"]*)\"$")
