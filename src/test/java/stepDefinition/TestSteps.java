@@ -51,7 +51,9 @@ public class TestSteps {
 		//capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
 
 		driver = new FirefoxDriver();
+		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
 		driver.manage().window().maximize();
+		driver.navigate().to(baseUrl);
 	}
 
 
