@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 import cucumber.api.java.en.Given;
@@ -26,7 +24,6 @@ public class TestSteps {
 	public void user_is_on_Home_Page() throws Throwable {
 		System.setProperty("webdriver.gecko.driver", "//opt//selenium//geckodriver");
 
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		// this line of code is to resolve protected mode issue
 		// capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
 		// true);
