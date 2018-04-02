@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 import cucumber.api.java.en.Given;
@@ -50,7 +51,8 @@ public class TestSteps {
 		// it takes 3 sends to type one character.
 		//capabilities.setCapability(ChromeDriver.NATIVE_EVENTS, false);
 
-		driver = new FirefoxDriver();
+		capabilities.setCapability("marionette", false);
+		driver = new FirefoxDriver(capabilities);
 		String baseUrl = "http://10.177.162.26:9080/mywebapp/userlogin.jsp";
 		driver.manage().window().maximize();
 		driver.navigate().to(baseUrl);
